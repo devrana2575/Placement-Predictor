@@ -46,7 +46,7 @@ with col2:
 
     with col_a:
         extra = st.selectbox(
-            "Extracurricular",
+            "Extracurricular Acitivities",
             ["Yes", "No"],
         )
     with col_b:
