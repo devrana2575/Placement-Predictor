@@ -1,72 +1,112 @@
-# 🎓 Student Placement Predictor
+# 🎓 Placement Predictor
 
-A machine learning web app that predicts whether a student will get placed based on their academic and extracurricular profile.
+Machine Learning based web application for predicting student placement outcomes using academic and extracurricular performance data.
 
----
-
-## 🛠️ Tech Used
-
-- **Python**
-- **Scikit-learn** — Gradient Boosting model
-- **Streamlit** — Web UI
-- **Plotly** — Gauge chart
-- **Pandas / NumPy** — Data handling
+Built using XGBoost, Scikit-learn, and Streamlit.
 
 ---
 
-## 🚀 How to Run (Step by Step)
+## 🚀 Features
 
-### 1. Install dependencies
+- Predicts student placement probability
+- XGBoost classification model
+- Interactive Streamlit web application
+- Single student prediction
+- Batch CSV prediction support
+- Data preprocessing and evaluation pipeline
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|---|---|
+| Programming | Python |
+| Libraries | Pandas, NumPy, Scikit-learn |
+| ML Model | XGBoost |
+| Visualization | Plotly |
+| Web App | Streamlit |
+
+---
+
+## 📈 Model Performance
+
+| Metric | Score |
+|---|---|
+| Accuracy | ~80% |
+| ROC-AUC | ~0.87 |
+
+---
+
+## 📂 Repository Structure
+
+```bash
+Placement-Predictor/
+│
+├── streamlit_app.py
+├── predict_pipeline.py
+├── train_model.py
+├── placement_prediction_enhanced.ipynb
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### Clone Repository
+
+```bash
+git clone https://github.com/devrana2575/Placement-Predictor.git
+cd Placement-Predictor
+```
+
+### Create Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+### Activate Environment
+
+#### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+#### Linux / Mac
+
+```bash
+source venv/bin/activate
+```
+
+### Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Train the model (run ONCE)
-```bash
-python train_model.py
-```
-This reads `placementdata.csv`, trains the model, and saves 3 files:
-- `placement_model.pkl`
-- `scaler.pkl`
-- `feature_names.pkl`
+### Run Application
 
-### 3. Start the app
 ```bash
 streamlit run streamlit_app.py
 ```
 
-Opens at `http://localhost:8501`
+---
+
+## 🌐 Application Capabilities
+
+- Placement prediction for individual students
+- Batch prediction using CSV files
+- Interactive probability visualization
+- Machine learning based evaluation workflow
 
 ---
 
-## 📁 File Structure
+## 👨‍💻 Author
 
-```
-placement_predictor/
-│
-├── streamlit_app.py       <- Main web app
-├── train_model.py         <- Run once to train and save model
-├── predict_pipeline.py    <- Prediction logic
-├── placementdata.csv      <- Dataset (10,000 students)
-├── requirements.txt       <- Dependencies
-│
-├── placement_model.pkl    <- Generated after running train_model.py
-├── scaler.pkl             <- Generated after running train_model.py
-└── feature_names.pkl      <- Generated after running train_model.py
-```
+**Dev Rana**
 
----
-
-## 📊 Model Details
-
-| Item | Detail |
-|---|---|
-| Algorithm | Gradient Boosting |
-| Dataset | 10,000 students |
-| Accuracy | ~80% |
-| Features | CGPA, Internships, Projects, Aptitude Score, Soft Skills, etc. |
-
----
-
-## 👤 Author
-**Devrana** — Built as a college ML project
+- GitHub: https://github.com/devrana2575
