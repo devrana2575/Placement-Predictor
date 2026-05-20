@@ -79,26 +79,46 @@ if st.button("🔮 Predict My Placement Chances", use_container_width=True, type
     bar_color = "#2ecc71" if prob >= 50 else ("#f39c12" if prob >= 30 else "#e74c3c")
 
     fig = go.Figure(go.Indicator(
-        mode="gauge+number",
-        value=prob,
-        number={"suffix": "%", "font": {"size": 40}},
-        title={"text": "Placement Probability"},
-        gauge={
-            "axis": {"range": [0, 100]},
-            "bar":  {"color": bar_color},
-            "steps": [
-                {"range": [0,  30],  "color": "#fde8e8"},
-                {"range": [30, 50],  "color": "#fef9e7"},
-                {"range": [50, 100], "color": "#e8f8f5"},
-            ],
-            "threshold": {
-                "line":      {"color": "#333", "width": 3},
-                "thickness": 0.75,
-                "value":     50,
-            },
+    mode="gauge+number",
+    value=prob,
+    
+    number={
+        'suffix': "%",
+        'font': {'size': 48}
+    },
+
+    title={
+        'text': "Placement Probability",
+        'font': {'size': 22}
+    },
+
+    gauge={
+        'axis': {
+            'range': [0, 100],
+            'tickfont': {'size': 16}
         },
+
+        'bar': {'thickness': 0.35},
+
+        'steps': [
+            {'range': [0, 40], 'color': "#f8d7da"},
+            {'range': [40, 60], 'color': "#fff3cd"},
+            {'range': [60, 100], 'color': "#d1e7dd"}
+        ],
+
+        'threshold': {
+            'line': {'color': "black", 'width': 4},
+            'thickness': 0.75,
+            'value': prob
+        }
+    }
     ))
-    fig.update_layout(height=300, margin=dict(t=50, b=0))
+
+    fig.update_layout(
+        height=450,
+        margin=dict(l=40, r=40, t=80, b=20)
+    )
+
     st.plotly_chart(fig, use_container_width=True)
 
     # ── Score breakdown ────────────────────────────────────────────────────────
