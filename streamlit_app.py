@@ -144,7 +144,7 @@ if st.button("🔮 Predict My Placement Chances", use_container_width=True, type
     ))
 
     fig.update_layout(
-        height=450,
+        height=500,
         margin=dict(l=40, r=40, t=80, b=20)
     )
 
