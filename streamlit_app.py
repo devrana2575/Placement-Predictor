@@ -171,3 +171,13 @@ if st.button("🔮 Predict My Placement Chances", use_container_width=True, type
             st.success("🎉 Great profile! Work on DSA, system design, and keep your GitHub active.")
         else:
             st.info("✅ Good chances! Push your aptitude score and soft skills even higher to strengthen your profile.")
+
+
+# Footer
+st.markdown("---")
+
+st.caption(
+    "© 2026 Placement Predictor • Developed by Dev Rana | "
+    "[GitHub](https://github.com/devrana2575) | "
+    "[LinkedIn](https://linkedin.com/in/devrana2575)"
+)
