@@ -1,5 +1,4 @@
 # Model files (large binaries — regenerate by running notebook)
-*.pkl
 
 # Data
 placementdata.csv
