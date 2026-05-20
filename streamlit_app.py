@@ -176,8 +176,13 @@ if st.button("🔮 Predict My Placement Chances", use_container_width=True, type
 # Footer
 st.markdown("---")
 
-st.caption(
-    "© 2026 Placement Predictor • Developed by Dev Rana • All Rights Reserved | "
-    "[GitHub](https://github.com/devrana2575) | "
-    "[LinkedIn](https://linkedin.com/in/devrana2575)"
+st.markdown(
+    """
+    <div style='text-align: center; color: gray; font-size: 14px;'>
+        © 2026 Placement Predictor • Developed by Dev Rana • All Rights Reserved<br>
+        <a href='https://github.com/devrana2575' target='_blank'>GitHub</a> |
+        <a href='https://linkedin.com/in/devrana2575' target='_blank'>LinkedIn</a>
+    </div>
+    """,
+    unsafe_allow_html=True
 )
