@@ -7,6 +7,7 @@ import streamlit as st
 import plotly.graph_objects as go
 import os
 from predict_pipeline import predict_single
+import time
 
 st.set_page_config(
     page_title="Placement Predictor",
@@ -50,6 +51,7 @@ st.divider()
 if st.button("🔮 Predict My Placement Chances", use_container_width=True, type="primary"):
 
     with st.spinner("Analyzing profile..."):
+        time.sleep(2)
 
         placed, prob = predict_single(
         cgpa=cgpa,
