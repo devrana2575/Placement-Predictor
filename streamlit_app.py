@@ -42,16 +42,20 @@ with col2:
     projects    = st.selectbox("Projects",                    list(range(0, 11)))
     workshops   = st.selectbox("Workshops / Certifications",  list(range(0, 8)))
     soft_skills = st.slider("Soft Skills (out of 5)",         1.0, 5.0, 3.0, 0.1)
-    extra = st.radio(
-        "Extracurricular Activities",
-        ["Yes", "No"],
-        horizontal=True
-    )
-    training = st.radio(
-        "Placement Training Attended",
-        ["Yes", "No"],
-        horizontal=True
-    )
+    col_a, col_b = st.columns(2)
+
+    with col_a:
+        extra = st.radio(
+            "Extracurricular",
+            ["Yes", "No"],
+            horizontal=True
+        )
+    with col_b:
+        training = st.radio(
+            "Placement Training",
+            ["Yes", "No"],
+            horizontal=True
+        )
 
 st.divider()
 
