@@ -49,7 +49,9 @@ st.divider()
 # ── Predict ────────────────────────────────────────────────────────────────────
 if st.button("🔮 Predict My Placement Chances", use_container_width=True, type="primary"):
 
-    placed, prob = predict_single(
+    with st.spinner("Analyzing profile..."):
+
+        placed, prob = predict_single(
         cgpa=cgpa,
         internships=internships,
         projects=projects,
@@ -67,13 +69,38 @@ if st.button("🔮 Predict My Placement Chances", use_container_width=True, type
 
     # ── Result banner ──────────────────────────────────────────────────────────
     if prob >= 75:
-        st.success(f"## ✅ Strong Placement Chances — {prob}%")
+        result_color = "#2ecc71"
+        result_text = "✅ Strong Placement Chances"
+
     elif prob >= 50:
-        st.success(f"## ✅ Likely to be Placed — {prob}%")
+        result_color = "#27ae60"
+        result_text = "✅ Likely to be Placed"
+
     elif prob >= 30:
-        st.warning(f"## ⚠️ Borderline — {prob}%")
+        result_color = "#f39c12"
+        result_text = "⚠️ Borderline Chances"
+
     else:
-        st.error(f"## ❌ Low Placement Chances — {prob}%")
+        result_color = "#e74c3c"
+        result_text = "❌ Low Placement Chances"
+
+    st.markdown(
+        f"""
+        <div style="
+            background-color:{result_color};
+            padding:15px;
+            border-radius:12px;
+            text-align:center;
+            color:white;
+            font-size:28px;
+            font-weight:bold;
+        ">
+            {result_text}<br>
+            {prob}%
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
     # ── Gauge chart ────────────────────────────────────────────────────────────
     bar_color = "#2ecc71" if prob >= 50 else ("#f39c12" if prob >= 30 else "#e74c3c")
