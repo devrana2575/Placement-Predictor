@@ -177,7 +177,7 @@ if st.button("🔮 Predict My Placement Chances", use_container_width=True, type
 st.markdown("---")
 
 st.caption(
-    "© 2026 Placement Predictor • Developed by Dev Rana | "
+    "© 2026 Placement Predictor • Developed by Dev Rana • All Rights Reserved | "
     "[GitHub](https://github.com/devrana2575) | "
     "[LinkedIn](https://linkedin.com/in/devrana2575)"
 )
