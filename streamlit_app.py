@@ -45,13 +45,13 @@ with col2:
     col_a, col_b = st.columns(2)
 
     with col_a:
-        extra = st.radio(
+        extra = st.selectbox(
             "Extracurricular",
             ["Yes", "No"],
             horizontal=True
         )
     with col_b:
-        training = st.radio(
+        training = st.selectbox(
             "Placement Training",
             ["Yes", "No"],
             horizontal=True
