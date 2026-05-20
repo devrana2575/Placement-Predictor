@@ -11,7 +11,7 @@ from predict_pipeline import predict_single
 st.set_page_config(
     page_title="Placement Predictor",
     page_icon="🎓",
-    layout="centered",
+    layout="wide",
 )
 
 # ── Model check ────────────────────────────────────────────────────────────────
