@@ -48,13 +48,11 @@ with col2:
         extra = st.selectbox(
             "Extracurricular",
             ["Yes", "No"],
-            horizontal=True
         )
     with col_b:
         training = st.selectbox(
             "Placement Training",
             ["Yes", "No"],
-            horizontal=True
         )
 
 st.divider()
