@@ -21,8 +21,23 @@ if not all(os.path.exists(f) for f in ["placement_pipeline.pkl", "feature_names.
     st.stop()
 
 # ── Header ─────────────────────────────────────────────────────────────────────
-st.title("🎓 Student Placement Predictor")
-st.caption("Enter your details and get an instant prediction of your placement chances.")
+st.markdown(
+    """
+    <h1 style='text-align: center;'>
+        🎓 Student Placement Predictor
+    </h1>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    """
+    <p style='text-align: center; font-size:18px; color:gray;'>
+        Enter your details and get an instant prediction of your placement chances.
+    </p>
+    """,
+    unsafe_allow_html=True
+)
 st.divider()
 
 # ── Inputs ─────────────────────────────────────────────────────────────────────
