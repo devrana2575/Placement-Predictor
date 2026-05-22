@@ -24,7 +24,7 @@ if not all(os.path.exists(f) for f in ["placement_pipeline.pkl", "feature_names.
 st.markdown(
     """
     <h1 style='text-align: center;'>
-        🎓 Student Placement Predictor
+        Student Placement Predictor
     </h1>
     """,
     unsafe_allow_html=True
